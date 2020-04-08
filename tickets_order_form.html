@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Party Tickets Order Form</title>
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+	<!-- header starts -->
+	<header>
+		<img src="images/pumpkin.gif" alt="Pumpkin" width="85">
+		<h2>The Halloween Store</h2>
+		<h3>For the little Goblin in all of us!</h3>
+	</header>
+
+	<!-- navigation starts -->
+	<nav id="nav_menu">
+		<ul>
+			<li><a href="index.html" class="current">Home</a></li>
+			<li><a href="about_us.html">About Us</a>
+				<ul>
+					<li><a href="our_history.html">Our History</a></li>
+					<li><a href="our_team.html">Our Team</a></li>
+				</ul>
+			</li>
+			<li><a href="products.html">Our Products</a></li>
+			<li><a href="tickets_order_form.html">Party Tickets</a></li>
+			<li><a href="contact_us.html">Contact Us</a></li>
+		</ul>
+	</nav>
+
+	<!-- main content starts -->
+	<main>
+		<!-- sidebar starts -->
+		<aside>
+			<ul>
+				<li><a href="products/props.html">Props</a></li>
+				<li><a href="products/costumes.html">Costumes</a></li>
+				<li><a href="products/special.html">Special FX</a></li>
+				<li><a href="products/masks.html">Masks</a></li>
+			</ul>
+		</aside>
+
+		<!-- the main section of the content starts -->
+		<section>
+			<h1>Buy Tickets for a Halloween Party</h1>
+			<!-- the order form goes here -->
+			<form action="place_order.html" method="post" name="order_form">
+				<fieldset>
+					<legend>Member Information</legend>
+					<label for="email">E-mail:</label>
+					<input type="email" id="email" name="email" autofocus required><br>
+					<label for="firstn">First Name:</label>
+					<input type="text" id="firstn" name="firstn" required><br>
+					<label for="lastn">Last Name:</label>
+					<input type="text" id="lastn" name="lastn" required><br>
+					<label for="address">Address:</label>
+					<input type="text" id="address" name="address"><br>
+					<label for="city">City:</label>
+					<input type="text" id="city" name="city" required><br>
+					<label for="province">Province:</label>
+					<input type="text" id="province" name="province" pattern="[A-Z a-z]{2}" title="Must be two letter province code" placeholder="2-character code" required><br>
+					<label for="postalcode">Postal Code:</label>
+					<input type="text" id="postalcode" name="postalcode" pattern="[A-Z a-z 0-9]{6}" title="Must be 6 alphanumerical characters" placeholder="6 characters" required><br>
+					<label for="phone">Phone Number:</label>
+					<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Must be 999-999-9999 format" placeholder="999-999-9999"><br>
+				</fieldset>
+
+				<fieldset>
+					<legend>Ordering Information</legend>
+					<label for="party">Party:</label>
+					<select id="party" name="party">
+						<option value="fangfeast">Fang-tastic Feast</option>
+						<option value="frightnight">Fright Night</option>
+						<option value="ghoulsnight">Ghouls' Night Out</option>
+						<option value="monstermash">Monster Mash</option>
+					</select><br><label for="ordertype">Order Type:</label>
+					<select id="ordertype" name="ordertype">
+						<option value="member">Member Package</option>
+						<option value="donor">Donor Package</option>
+						<option value="single">Single Tickets</option>
+					</select><br>
+					<label for="ticketnum">Number of Tickets:</label>
+					<input type="number" id="ticketnum" name="ticketnum" min="1" placeholder="Number of single tickets"><br>
+				</fieldset>
+
+				<fieldset id="payment_method">
+					<legend>Payment Method</legend>
+					<input type="radio" id="billme" name="paymentmethod" value="billme">
+					<label for="billme">Bill Me</label>
+					<input type="radio" id="creditcard" name="paymentmethod" value="creditcard">
+					<label for="creditcard">Credit Card</label><br>
+				</fieldset>
+
+				<fieldset>
+					<legend>Credit Card</legend>
+					<label for="cardtype">Card Type:</label>
+					<select id="cardtype" name="cardtype">
+						<option value="visa">Visa</option>
+						<option value="mastercard">Master Card</option>
+						<option value="discover">Discover</option>
+					</select><br>
+					<label for="cardnum">Card Number:</label>
+					<input type="text" id="cardnum" name="cardnum" pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" title="Must be in 9999 9999 9999 9999 format" placeholder="16 digits" required><br>
+					<label for="expdate">Expiration Date:</label>
+					<select id="month" name="expdate">
+						<option value="jan">January</option>
+						<option value="feb">February</option>
+						<option value="mar">March</option>
+						<option value="apr">April</option>
+						<option value="may">May</option>
+						<option value="jun">June</option>
+						<option value="jul">July</option>
+						<option value="aug">August</option>
+						<option value="sept">September</option>
+						<option value="oct">October</option>
+						<option value="nov">November</option>
+						<option value="dec">December</option>
+					</select>
+					<select id="year" name="expdate">
+						<option value="2015">2015</option>
+						<option value="2016">2016</option>
+						<option value="2017">2017</option>
+						<option value="2018">2018</option>
+						<option value="2019">2019</option>
+					</select><br>
+				</fieldset>
+
+				<fieldset>
+					<legend>Submit Your Order</legend>
+					<input type="submit" value="Submit">
+					<input type="reset" value="Reset Fields">
+				</fieldset>
+			</form>
+		</section>
+	</main>
+
+	<!-- footer starts -->
+	<footer>
+		<p>&copy; 2020 Your Name</p>
+	</footer>
+</body>
+
+</html>
